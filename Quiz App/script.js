@@ -53,10 +53,7 @@ let score = 0;
 let loadQuize = () => {
   let currentQuestion = quizData[currentQuestionIndex].question;
 
-  console.log("currentQuestion is ", currentQuestion);
-
   let OptionsformArray = quizData[currentQuestionIndex].options;
-  console.log(OptionsformArray);
 
   questionDiv.textContent = currentQuestion;
 
@@ -70,12 +67,10 @@ loadQuize();
 
 let getSelectedOption = () => {
   let ans_index;
-  let checkedvalue;
 
   answer_radio.forEach((currentradio, index) => {
     if (currentradio.checked) {
-      console.log(currentradio);
-      ans_index = index;
+      ans_index = index + 1;
     }
   });
 
@@ -93,8 +88,13 @@ let deselectedRadio = () => {
 submit_btn.addEventListener("click", () => {
   let selectOptionIndex = getSelectedOption();
 
-  if (selectOptionIndex === quizData[currentQuestionIndex].corect) {
+  if (selectOptionIndex - 1 === quizData[currentQuestionIndex].corect) {
     score++;
+  }
+
+  if (!selectOptionIndex) {
+    alert("please select the options");
+    return;
   }
 
   currentQuestionIndex++;
