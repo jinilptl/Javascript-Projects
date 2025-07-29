@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quiz App</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="question">1. What is the capital of India?</div>
 
-  <div class="quiz-container">
-    <div class="question">1. What is the capital of India?</div>
+      <div class="option">
+        <input
+          type="radio"
+          name="question1"
+          value="A"
+          id="opt1"
+          class="Input-radio"
+        />
+        <label for="opt1" class="options_1">Mumbai</label>
+      </div>
 
-    <div class="option">
-      <input type="radio" name="question1" id="opt1" value="A">
-      <label for="opt1">Mumbai</label>
+      <div class="option">
+        <input
+          type="radio"
+          name="question1"
+          value="B"
+          id="opt2"
+          class="Input-radio"
+        />
+        <label for="opt2" class="options_2">Delhi</label>
+      </div>
+
+      <div class="option">
+        <input
+          type="radio"
+          name="question1"
+          id="opt3"
+          value="C"
+          class="Input-radio"
+        />
+        <label for="opt3" class="options_3">Kolkata</label>
+      </div>
+
+      <div class="option">
+        <input
+          type="radio"
+          name="question1"
+          id="opt4"
+          value="D"
+          class="Input-radio"
+        />
+        <label for="opt4" class="options_4">Chennai</label>
+      </div>
+
+      <button class="submit-btn">Submit</button>
     </div>
 
-    <div class="option">
-      <input type="radio" name="question1" id="opt2" value="B">
-      <label for="opt2">Delhi</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="question1" id="opt3" value="C">
-      <label for="opt3">Kolkata</label>
-    </div>
-
-    <div class="option">
-      <input type="radio" name="question1" id="opt4" value="D">
-      <label for="opt4">Chennai</label>
-    </div>
-
-    <button class="submit-btn">Submit</button>
-  </div>
-
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
